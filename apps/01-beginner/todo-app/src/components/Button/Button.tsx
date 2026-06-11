@@ -1,13 +1,17 @@
-import type { ReactNode } from "react";
+import type { ButtonHTMLAttributes } from "react";
 
-type Props = {
-   children: ReactNode;
-   className?: string;
-}
+// type Props = {
+//    children: ReactNode;
+//    className?: string;
+// }
+
+type Props = ButtonHTMLAttributes<HTMLButtonElement>
 
 const Button = (props: Props) => {
-   const { children, className } = props;
+   const { children, className: customClassName } = props;
+   const className = `btn btn-default ${customClassName ?? ''}`;
 
-   return <button className={`btn btn-default ${className}`}>{children}</button>;
+   return <button className={className}>{children}</button>;
 };
+
 export default Button;

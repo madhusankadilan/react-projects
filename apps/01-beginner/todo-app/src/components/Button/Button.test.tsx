@@ -7,5 +7,7 @@ describe('Props Testing', async () => {
       const { getByText } = await render(<Button>Add Task</Button>);
       await expect.element(getByText('Add Task')).toBeInTheDocument();
    });
+   // Test cases for custom props
+   // Test cases for specific default attributes like (type = submit, reset) ...etc
 });
 
