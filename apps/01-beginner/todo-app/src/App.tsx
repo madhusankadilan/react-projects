@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-// Testing JIRA integration
+// Testing JIRA integration updated
   return <></>;
 }
 
